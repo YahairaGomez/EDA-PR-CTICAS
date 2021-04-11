@@ -1,0 +1,5 @@
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/REAL/Euclidean/out/build/x64-Debug (predeterminado)/CMakeFiles/edit_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/REAL/Euclidean/out/build/x64-Debug (predeterminado)/CMakeFiles/rebuild_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/REAL/Euclidean/out/build/x64-Debug (predeterminado)/Euclidean/CMakeFiles/Euclidean.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/REAL/Euclidean/out/build/x64-Debug (predeterminado)/Euclidean/CMakeFiles/edit_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/REAL/Euclidean/out/build/x64-Debug (predeterminado)/Euclidean/CMakeFiles/rebuild_cache.dir
