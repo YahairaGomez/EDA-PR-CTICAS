@@ -1,0 +1,5 @@
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/QuadTreeCmake/out/build/x64-Debug (predeterminado)/CMakeFiles/edit_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/QuadTreeCmake/out/build/x64-Debug (predeterminado)/CMakeFiles/rebuild_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/QuadTreeCmake/out/build/x64-Debug (predeterminado)/QuadTreeCmake/CMakeFiles/QuadTreeCmake.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/QuadTreeCmake/out/build/x64-Debug (predeterminado)/QuadTreeCmake/CMakeFiles/edit_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/QuadTreeCmake/out/build/x64-Debug (predeterminado)/QuadTreeCmake/CMakeFiles/rebuild_cache.dir
