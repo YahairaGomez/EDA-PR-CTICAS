@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    <style>
+        #mapid { height: 512px;width:1024px; }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+<body>
+    <div id="mapid"></div>
+
+    
+    <script>
+        var mymap = L.map('mapid').setView([39.74814680377901, -104.95773917316156], 12);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(mymap);
+
+        $.ajax({
+            url: "data.txt",
+            async: false,
+            cache: false,
+            crossDomain: true,
+            dataType: "text",
+            success: function( data, textStatus, jqXHR ) {
+                var lines = data.split('\n');
+                for(var line = 0; line < lines.length; line++){
+                    var colorSplit = lines[line].split('/');
+                    var color = colorSplit[1];
+                    var splitBounds = colorSplit[0].split('$');
+                    var leftBound = splitBounds[0].split(' ');
+                    var rightBound = splitBounds[1].split(' ');
+                    var scale = 1.0
+                    var bounds = [[parseFloat(leftBound[0])*scale, parseFloat(leftBound[1])*scale], [parseFloat(rightBound[0])*scale, parseFloat(rightBound[1])*scale]];
+                    console.log(new String(color).localeCompare('yellow'));
+                    color = color.replace("\'","");
+                    color = color.replace("\'","");
+                
+
+                    console.log({color: color, weight: 10})
+
+                    L.rectangle(bounds, {color:color, weight: 5}).addTo(mymap);
+                }
+                
+            }
+        });
+
+
+    </script>
+</body>
+</html>
