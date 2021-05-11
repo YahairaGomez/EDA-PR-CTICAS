@@ -1,0 +1,5 @@
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/Rtree_Guttman/out/build/x64-Debug (predeterminado)/CMakeFiles/edit_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/Rtree_Guttman/out/build/x64-Debug (predeterminado)/CMakeFiles/rebuild_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/Rtree_Guttman/out/build/x64-Debug (predeterminado)/Rtree_Guttman/CMakeFiles/Rtree_Guttman.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/Rtree_Guttman/out/build/x64-Debug (predeterminado)/Rtree_Guttman/CMakeFiles/edit_cache.dir
+C:/Users/Valeria/Documents/CCOMP1-2021/EDA/Rtree_Guttman/out/build/x64-Debug (predeterminado)/Rtree_Guttman/CMakeFiles/rebuild_cache.dir
