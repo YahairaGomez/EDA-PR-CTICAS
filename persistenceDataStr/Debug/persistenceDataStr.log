@@ -1,0 +1,32 @@
+﻿  persistenceDataStr.cpp
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(46,43): warning C4018: '<=': no coinciden signed/unsigned
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(44): message : al compilar la función del miembro clase plantilla "PartialNode<int> &PartialNode<int>::operator [](std::pair<size_t,unsigned int>) const"
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(151): message : Vea la referencia a la creación de una instancia de la función plantilla "PartialNode<int> &PartialNode<int>::operator [](std::pair<size_t,unsigned int>) const" que se está compilando
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(142): message : Vea la referencia a la creación de una instancia de clase plantilla "PartialNode<int>" que se está compilando
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(79,32): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(76): message : al compilar la función del miembro clase plantilla "Node *Partial_list<int,Node>::insert_node(const int,Node *,size_t)"
+          with
+          [
+              Node=PartialNode<int>
+          ]
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(145): message : Vea la referencia a la creación de una instancia de la función plantilla "Node *Partial_list<int,Node>::insert_node(const int,Node *,size_t)" que se está compilando
+          with
+          [
+              Node=PartialNode<int>
+          ]
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(141): message : Vea la referencia a la creación de una instancia de clase plantilla "Partial_list<int,PartialNode<int>>" que se está compilando
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(38,2): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(34): message : al compilar la función del miembro clase plantilla "PartialNode<int>::PartialNode(int,const size_t &,const size_t &)"
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(82): message : Vea la referencia a la creación de una instancia de la función plantilla "PartialNode<int>::PartialNode(int,const size_t &,const size_t &)" que se está compilando
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(113,34): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(112): message : al compilar la función del miembro clase plantilla "void Partial_list<int,PartialNode<int>>::con_node(Node *,Node *,size_t,unsigned int)"
+          with
+          [
+              Node=PartialNode<int>
+          ]
+C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\persistenceDataStr\persistenceDataStr.cpp(99): message : Vea la referencia a la creación de una instancia de la función plantilla "void Partial_list<int,PartialNode<int>>::con_node(Node *,Node *,size_t,unsigned int)" que se está compilando
+          with
+          [
+              Node=PartialNode<int>
+          ]
+  persistenceDataStr.vcxproj -> C:\Users\Valeria\Documents\CCOMP1-2021\EDA\persistenceDataStr\Debug\persistenceDataStr.exe
