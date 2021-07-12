@@ -40,4 +40,4 @@ Luego ejecute el programa con:
 
 ## Expresiones de Gratitud 🎁
 
-* Agradecimiento especiales a YouTube y a la cafeína ☕
+* Agradecimiento especial a YouTube y a la cafeína ☕
