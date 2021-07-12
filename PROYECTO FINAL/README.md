@@ -24,8 +24,10 @@ INPUT: describe
 El algoritmo se detiene cuando ya se analizó todos los abstracts o si no hay alguna coincidencia con la palabra buscada.
 
 ### Instalación 🔧
-
-Descargue la carpeta la carpeta completa y ejecute el programa el cualquier entorno de desarrollo.
+Para instalar y correr el proyecto descargue la carpeta la carpeta completa y ejecute el programa el cualquier entorno de desarrollo o también puede compilarlo desde su consola con el siguiente comando:
+g++ -std=c++0x -o FinalProject.exe FinalProject.cpp 
+Luego ejecute el programa con:
+./FinalProject.exe
 
 ## Autor ✒️
 
