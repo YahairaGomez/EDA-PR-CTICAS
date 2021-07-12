@@ -16,8 +16,8 @@ public:
     suffixTree* children[26];
     //CONTENEDOR QUE CONTIENE LISTAS DE OCURRENCIAS 
     //(ID DOCUMENTO, # OCURRENCIAS)
-    //CUANDO INSERTO LAS PALABRAS A MI ¡RBOL VOY HACIENDO DEL N⁄MERO DE OCURRENCIAS DE PALABRAS QUE HAY EN EL DOCUMENTO Y LAS GUARDO SEG⁄N SU ID.
-    //USO UN MAP PORQUE NO S… LA CANTIDAD DE N⁄MEROS QUE VOY A INGRESAR (MAP YA SABE C”MO MANEJAR ESTA CONDICI”N)
+    //CUANDO INSERTO LAS PALABRAS A MI √ÅRBOL VOY HACIENDO DEL N√öMERO DE OCURRENCIAS DE PALABRAS QUE HAY EN EL DOCUMENTO Y LAS GUARDO SEG√öN SU ID.
+    //USO UN MAP PORQUE NO S√â LA CANTIDAD DE N√öMEROS QUE VOY A INGRESAR (MAP YA SABE C√ìMO MANEJAR ESTA CONDICI√ìN)
     map<int, int>ocurren;
 
     //CONSTRUCTOR DE SUFFIX TREE
@@ -37,7 +37,7 @@ public:
         }
     }
 
-    //FUNCI”N QUE INSERTA LA PALABRA AL ¡RBOL, RECIBE DOS ENTRADAS: LA PALABRA QUE QUIERO INSERTAR Y SU ID
+    //FUNCI√ìN QUE INSERTA LA PALABRA AL √ÅRBOL, RECIBE DOS ENTRADAS: LA PALABRA QUE QUIERO INSERTAR Y SU ID
     void insert(const string& word_to_be_inserted, int id)
     {
         //PUNTERO AL NODO EN EL CUAL VA A SER INSERTADO
@@ -46,21 +46,21 @@ public:
         {
 
             //INSERTO SI ES DIFERENTE DE _ 
-            //ESTO DEBIDO A QUE EN LA ETAPA DE PROCESAMIENTO SE ELIMINAN LOS SIGNOS DE PUNTUACI”N, Y POR ALGUNA RAZ”N, 
-            //NO SE ELIMINA EL "_", ENTONCES AQUÕ TENGO CONTROL SOBRE ESA CONDICI”N.
-            //SI NO TUVIERA ESTO DARÕA ERROR YA QUE NO LO CONSIDERARÕA EN LA ETAPA DE NORMALIZACI”N.
+            //ESTO DEBIDO A QUE EN LA ETAPA DE PROCESAMIENTO SE ELIMINAN LOS SIGNOS DE PUNTUACI√ìN, Y POR ALGUNA RAZ√ìN, 
+            //NO SE ELIMINA EL "_", ENTONCES AQU√ç TENGO CONTROL SOBRE ESA CONDICI√ìN.
+            //SI NO TUVIERA ESTO DAR√çA ERROR YA QUE NO LO CONSIDERAR√çA EN LA ETAPA DE NORMALIZACI√ìN.
             
             if (letter != '_')
             {
-                //USANDO TABLA ASCII, SI RESTO "a" SE NORMALIZA, REDUCE LOS VALORES DE 0 a 26, HAY QUE TOMAR EN CUENTA QUE ESTAMOS TRABAJANDO CON LETRAS MIN⁄SCULAS
-                //a VENDRÕA A SER COMO UN MÕNIMO
-                //ENTONCES, SI MI PUNTERO APUNTA A NULL (O SEA SI EST¡ INICIALIZADO, ES NUEVO), CREO UN NUEVO HIJO
+                //USANDO TABLA ASCII, SI RESTO "a" SE NORMALIZA, REDUCE LOS VALORES DE 0 a 26, HAY QUE TOMAR EN CUENTA QUE ESTAMOS TRABAJANDO CON LETRAS MIN√öSCULAS
+                //a VENDR√çA A SER COMO UN M√çNIMO
+                //ENTONCES, SI MI PUNTERO APUNTA A NULL (O SEA SI EST√Å INICIALIZADO, ES NUEVO), CREO UN NUEVO HIJO
                 //SI NO LE PONGO LA RESTA, PODEMOS SALIRNOS DEL RANGO DEL ARRAY
                 if ((p->children[letter - 'a']) == nullptr)
                 {
                     (p->children[letter - 'a']) = new suffixTree();
                 }
-                //AHORA MI PUNTERO P APUNTAR¡ A ESE HIJO
+                //AHORA MI PUNTERO P APUNTAR√Å A ESE HIJO
                 p = (p->children[letter - 'a']);
             }
         }
@@ -69,15 +69,15 @@ public:
         (p->ocurren[id])++;
     }
 
-    //FUNCI”N PARA BUSCAR UNA PALABRA 
+    //FUNCI√ìN PARA BUSCAR UNA PALABRA 
     int _find(const string& word_I_wanna_find, int N) {
         suffixTree* p = this;
-        //EMPIEZO MI B⁄SQUEDA DESDE EL PRIMER CARACTER HASTA EL ⁄LTIMO DE LA PALABRA A BUSCAR
+        //EMPIEZO MI B√öSQUEDA DESDE EL PRIMER CARACTER HASTA EL √öLTIMO DE LA PALABRA A BUSCAR
         for (char letter : word_I_wanna_find)
         {
-            //P SE QUEDA EN LA POSICI”N DONDE FUE ENCONTRADA 
+            //P SE QUEDA EN LA POSICI√ìN DONDE FUE ENCONTRADA 
             //SI EN CASO NO LO ENCUENTRA (SI NO EXISTE UNA FORMA DE LLEGAR AL NODO), RETORNA FALSE
-            //SINO SIMPLEMENTE SE QUEDA EN LA POSICI”N DEL NODO DE LA PALABRA 
+            //SINO SIMPLEMENTE SE QUEDA EN LA POSICI√ìN DEL NODO DE LA PALABRA 
             if (p->children[letter - 'a'] == nullptr)
             {
                 cout << "No existe esta palabra" << endl;
@@ -88,12 +88,12 @@ public:
         }
 
 
-        //PUEDE QUE P EST… APUNTANDO A UNA PALABRA Y QUE ESTA SEA EL PREFIJO DE OTRA, PERO NO ES LA PALABRA QUE ESTAMOS BUSCANDO.
+        //PUEDE QUE P EST√â APUNTANDO A UNA PALABRA Y QUE ESTA SEA EL PREFIJO DE OTRA, PERO NO ES LA PALABRA QUE ESTAMOS BUSCANDO.
         //ESTO LO VERIFICAMOS CON NUESTRO MAP
-        //LA PALABRA ES PREFIJO DE OTRA, PERO NO LA PALABRA EN SÕ
-        //EJM: SUP. QUE INSERTAMOS LA PALABRA "YAHAIRA", Y QUEREMOS BUSCAR LA PALABRA "YA", NUESTRO PUNTERO P VA A RECORRER EL ¡RBOL Y SÕ VA A ENCONTRAR EL 
-        //CAMINO QUE ME LLEVE DESDE LA RAIZ HASTA LA PALABRA "YA". SIN EMBARGO, ESTA PALABRA NO EXISTE EN SÕ, ES SOLO UN PREFIJO DE OTRA, ENTONCES
-        //AC¡ SE VERIFICA QUE: SI NUNCA SE HA AGREGADO UNA OCURRENCIA, SIGNIFICA QUE NUNCA EXISTI” ESA PALABRA.
+        //LA PALABRA ES PREFIJO DE OTRA, PERO NO LA PALABRA EN S√ç
+        //EJM: SUP. QUE INSERTAMOS LA PALABRA "YAHAIRA", Y QUEREMOS BUSCAR LA PALABRA "YA", NUESTRO PUNTERO P VA A RECORRER EL √ÅRBOL Y S√ç VA A ENCONTRAR EL 
+        //CAMINO QUE ME LLEVE DESDE LA RAIZ HASTA LA PALABRA "YA". SIN EMBARGO, ESTA PALABRA NO EXISTE EN S√ç, ES SOLO UN PREFIJO DE OTRA, ENTONCES
+        //AC√Å SE VERIFICA QUE: SI NUNCA SE HA AGREGADO UNA OCURRENCIA, SIGNIFICA QUE NUNCA EXISTI√ì ESA PALABRA.
 
         if (p->ocurren.empty()) {
             cout << "No existe esta palabra" << endl;
@@ -103,14 +103,14 @@ public:
         //CANTIDAD DE DOCUMENTOS DONDE APARECE LA PALABRA 
         int df = ocurren.size();
 
-        //POR ⁄LTIMO RECORRO MI MAP 
+        //POR √öLTIMO RECORRO MI MAP 
         for (auto i : (p->ocurren))
         {
 
             //i.second ES DONDE SE GUARDA LA CANTIDAD DE OCURRENCIAS EN UN DOCUMENTO
             int TF = i.second;
 
-            //F”RMULA PARA CALCULAR EL SCORE DE OCURRENCIAS DEL DOCUMENTO
+            //F√ìRMULA PARA CALCULAR EL SCORE DE OCURRENCIAS DEL DOCUMENTO
             float f = 1.0f * TF * log10(N / df);
             //i.first ES EL ID DEL DOCUMENTO, CANTIDAD DE OCURRENCIAS EN UN DOCUMENTO, SCORE CALCULADO
             cout << "Documento: " << i.first << " ,  ocurrencias: " << i.second << ",  f: " << f << endl;
@@ -124,10 +124,10 @@ int main() {
 
     int id_file = 1;
     fstream file;
-    string word, t, q, filename;
-
+    string wordTree, t, q, filename;
+    
     // filename of the file
-    filename = "allabstracts500000.txt";
+    filename = "allabstracts100.txt";
 
     // opening file
     file.open(filename.c_str());
@@ -137,17 +137,17 @@ int main() {
     suffixTree tree;
     std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
     start = std::chrono::high_resolution_clock::now();
-    while (file >> word)
+    while (file >> wordTree)
     {
-        //DETECTA EL SÕMBOLO $ Y SEPARA LOS ABSTRACTS
-        if (word[0] == '$'){
+        //DETECTA EL S√çMBOLO $ Y SEPARA LOS ABSTRACTS
+        if (wordTree[0] == '$'){
             id_file++;
         }
-        else if (word.size() > 1)
+        else if (wordTree.size() > 1)
         {
             // cout<<"word: "<<word<<endl;
             
-            tree.insert(word, id_file);
+            tree.insert(wordTree, id_file);
             
         }
     }
@@ -155,11 +155,15 @@ int main() {
     cout << "Time inserting " + std::to_string(duration) + "ns\n";
 
     cout << "Ingresa la palabra a buscar " << endl;
-    string pattern; cin >> pattern;
-
+    string query; 
+    cin >> query;
+    for (int i = 0; i < query.size(); i++) {
+        query[i] = tolower(query[i]);
+    }
+    
     std::chrono::time_point<std::chrono::high_resolution_clock> start2, end2;
     start2 = std::chrono::high_resolution_clock::now();
-    cout << tree._find(pattern, id_file - 1) << endl;
+    cout << tree._find(query, id_file - 1) << endl;
     end2 = std::chrono::high_resolution_clock::now(); int64_t duration2 = std::chrono::duration_cast<std::chrono::nanoseconds>(end2 - start2).count();
     cout << "Time searching " + std::to_string(duration2) + "ns\n";
 
