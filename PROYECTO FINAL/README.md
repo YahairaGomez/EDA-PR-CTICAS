@@ -16,7 +16,7 @@ Explicación del formato de entrada:
 Actualmente el programa se encuentra indexado con 500 000 abstracts, así que puede que demore cierto tiempo indexar todas las palabras. 
 1. Una vez culminado esto, aparecerá la frase "Ingresa la palabra a buscar"
 2. Escriba la palabra que desee buscar.
-3. El programa imprimirá todas las ocurrencias de la palabra en los abstracts que la contengan. En caso la palabra no esté en algún documento, imprimirá la frase "No existe esta palabra"
+3. El programa imprimirá todas las ocurrencias de la palabra en los abstracts que la contengan. En caso la palabra no esté en algún documento, imprimirá la frase "No existe esta palabra"\\
 NOTA: Puede modificar la cantidad de abstracts reemplazando la línea 130 del programa por la cantidad que desee (ejemplo: filename = "allabstracts100.txt"), tomando el cuenta que dicho archivo se encuentre en el conjunto de datos brindado en la página de drive (https://drive.google.com/drive/folders/1jAmpwspXkdzLJHMEhM3JPVuHd7-JiwYL)
 
 Ejemplo de conjunto de datos:
@@ -25,6 +25,7 @@ El algoritmo se detiene cuando ya se analizó todos los abstracts o si no hay al
 
 ### Instalación 🔧
 Para instalar y correr el proyecto descargue la carpeta la carpeta completa y ejecute el programa el cualquier entorno de desarrollo o también puede compilarlo desde su consola con el siguiente comando:
+
 g++ -std=c++0x -o FinalProject.exe FinalProject.cpp 
 Luego ejecute el programa con:
 ./FinalProject.exe
